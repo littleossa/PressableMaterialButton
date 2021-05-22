@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>PressableMaterialButton.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
 		<key>PushableMaterialButton.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
