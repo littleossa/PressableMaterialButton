@@ -11,8 +11,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var neverPressLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction private func pressedButton() {
+        neverPressLabel.text = "ちゅ😘"
+    }
+    
+    @IBAction private func releasedButton() {
+        neverPressLabel.text = "絶対に押すな！！"
     }
 }
 
