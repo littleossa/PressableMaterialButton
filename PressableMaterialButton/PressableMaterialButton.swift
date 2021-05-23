@@ -8,7 +8,9 @@
 import UIKit
 
 class PressableMaterialButton: UIButton {
-        
+    
+    private var shadowOffsetHeight: CGFloat!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -25,16 +27,11 @@ class PressableMaterialButton: UIButton {
         self.layer.cornerRadius = self.frame.height / 2
         self.layer.masksToBounds = false
         addShadow(color: .red)
-    }
-    
-    private func addFrameBorder() {
-        self.layer.borderColor = UIColor.black.cgColor
-        self.layer.borderWidth = 1
+        shadowOffsetHeight = self.layer.shadowOffset.height
     }
     
     private func addShadow(color: UIColor) {
-        self.layer.shadowOffset = CGSize(width: 0, height: 14)
-        print("back", self.backgroundColor!)
+        self.layer.shadowOffset = CGSize(width: 0, height: 20)
         self.layer.shadowColor = color.cgColor
         self.layer.shadowRadius = 1
         self.layer.shadowOpacity = 1.0
@@ -61,15 +58,15 @@ extension PressableMaterialButton {
     
     private func pressButtonAnimation() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseIn) {
-            self.center.y += self.layer.shadowOffset.height
-            self.layer.shadowOpacity = 0
+            self.transform = CGAffineTransform(translationX: 0, y: self.shadowOffsetHeight)
+            self.layer.shadowOffset.height = 0
         }
     }
     
     private func releaseButtonAnimation() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseIn) {
-            self.center.y -= self.layer.shadowOffset.height
-            self.layer.shadowOpacity = 1.0
+            self.transform = CGAffineTransform.identity
+            self.layer.shadowOffset.height = self.shadowOffsetHeight
         }
     }
 }
