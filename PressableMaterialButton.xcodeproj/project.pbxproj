@@ -13,11 +13,11 @@
 		978B9CD826592C7A00072623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 978B9CD626592C7A00072623 /* Main.storyboard */; };
 		978B9CDA26592C7B00072623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 978B9CD926592C7B00072623 /* Assets.xcassets */; };
 		978B9CDD26592C7B00072623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 978B9CDB26592C7B00072623 /* LaunchScreen.storyboard */; };
-		978B9CE526592D6700072623 /* PushableMaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978B9CE426592D6700072623 /* PushableMaterialButton.swift */; };
+		978B9CE72659A95400072623 /* PressableMaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978B9CE62659A95400072623 /* PressableMaterialButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		978B9CCD26592C7A00072623 /* PushableMaterialButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushableMaterialButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		978B9CCD26592C7A00072623 /* PressableMaterialButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PressableMaterialButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		978B9CD026592C7A00072623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		978B9CD226592C7A00072623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		978B9CD426592C7A00072623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +25,7 @@
 		978B9CD926592C7B00072623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		978B9CDC26592C7B00072623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		978B9CDE26592C7B00072623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		978B9CE426592D6700072623 /* PushableMaterialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushableMaterialButton.swift; sourceTree = "<group>"; };
+		978B9CE62659A95400072623 /* PressableMaterialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressableMaterialButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 		978B9CC426592C7A00072623 = {
 			isa = PBXGroup;
 			children = (
-				978B9CCF26592C7A00072623 /* PushableMaterialButton */,
+				978B9CCF26592C7A00072623 /* PressableMaterialButton */,
 				978B9CCE26592C7A00072623 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,32 +50,32 @@
 		978B9CCE26592C7A00072623 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				978B9CCD26592C7A00072623 /* PushableMaterialButton.app */,
+				978B9CCD26592C7A00072623 /* PressableMaterialButton.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		978B9CCF26592C7A00072623 /* PushableMaterialButton */ = {
+		978B9CCF26592C7A00072623 /* PressableMaterialButton */ = {
 			isa = PBXGroup;
 			children = (
 				978B9CD026592C7A00072623 /* AppDelegate.swift */,
 				978B9CD226592C7A00072623 /* SceneDelegate.swift */,
 				978B9CD426592C7A00072623 /* ViewController.swift */,
-				978B9CE426592D6700072623 /* PushableMaterialButton.swift */,
+				978B9CE62659A95400072623 /* PressableMaterialButton.swift */,
 				978B9CD626592C7A00072623 /* Main.storyboard */,
 				978B9CD926592C7B00072623 /* Assets.xcassets */,
 				978B9CDB26592C7B00072623 /* LaunchScreen.storyboard */,
 				978B9CDE26592C7B00072623 /* Info.plist */,
 			);
-			path = PushableMaterialButton;
+			path = PressableMaterialButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		978B9CCC26592C7A00072623 /* PushableMaterialButton */ = {
+		978B9CCC26592C7A00072623 /* PressableMaterialButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 978B9CE126592C7B00072623 /* Build configuration list for PBXNativeTarget "PushableMaterialButton" */;
+			buildConfigurationList = 978B9CE126592C7B00072623 /* Build configuration list for PBXNativeTarget "PressableMaterialButton" */;
 			buildPhases = (
 				978B9CC926592C7A00072623 /* Sources */,
 				978B9CCA26592C7A00072623 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = PushableMaterialButton;
+			name = PressableMaterialButton;
 			productName = PushableMaterialButton;
-			productReference = 978B9CCD26592C7A00072623 /* PushableMaterialButton.app */;
+			productReference = 978B9CCD26592C7A00072623 /* PressableMaterialButton.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 978B9CC826592C7A00072623 /* Build configuration list for PBXProject "PushableMaterialButton" */;
+			buildConfigurationList = 978B9CC826592C7A00072623 /* Build configuration list for PBXProject "PressableMaterialButton" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				978B9CCC26592C7A00072623 /* PushableMaterialButton */,
+				978B9CCC26592C7A00072623 /* PressableMaterialButton */,
 			);
 		};
 /* End PBXProject section */
@@ -141,8 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				978B9CD526592C7A00072623 /* ViewController.swift in Sources */,
+				978B9CE72659A95400072623 /* PressableMaterialButton.swift in Sources */,
 				978B9CD126592C7A00072623 /* AppDelegate.swift in Sources */,
-				978B9CE526592D6700072623 /* PushableMaterialButton.swift in Sources */,
 				978B9CD326592C7A00072623 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,12 +292,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V4975L824;
-				INFOPLIST_FILE = PushableMaterialButton/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PressableMaterialButton/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.hotmail.lilossa.PushableMaterialButton;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.hotmail.lilossa.PressableMaterialButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,12 +311,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V4975L824;
-				INFOPLIST_FILE = PushableMaterialButton/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PressableMaterialButton/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.hotmail.lilossa.PushableMaterialButton;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.hotmail.lilossa.PressableMaterialButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,7 +326,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		978B9CC826592C7A00072623 /* Build configuration list for PBXProject "PushableMaterialButton" */ = {
+		978B9CC826592C7A00072623 /* Build configuration list for PBXProject "PressableMaterialButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				978B9CDF26592C7B00072623 /* Debug */,
@@ -335,7 +335,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		978B9CE126592C7B00072623 /* Build configuration list for PBXNativeTarget "PushableMaterialButton" */ = {
+		978B9CE126592C7B00072623 /* Build configuration list for PBXNativeTarget "PressableMaterialButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				978B9CE226592C7B00072623 /* Debug */,

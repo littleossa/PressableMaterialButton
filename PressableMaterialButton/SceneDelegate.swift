@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  PushableMaterialButton
+//  PressableMaterialButton
 //
 //  Created by 平岡修 on 2021/05/22.
 //

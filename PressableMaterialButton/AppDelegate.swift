@@ -1,12 +1,11 @@
 //
 //  AppDelegate.swift
-//  PushableMaterialButton
+//  PressablebleMaterialButton
 //
 //  Created by 平岡修 on 2021/05/22.
 //
 
 import UIKit
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
