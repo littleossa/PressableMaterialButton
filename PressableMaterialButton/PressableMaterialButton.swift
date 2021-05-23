@@ -26,12 +26,12 @@ class PressableMaterialButton: UIButton {
     private func configureUI() {
         self.layer.cornerRadius = self.frame.height / 2
         self.layer.masksToBounds = false
-        addShadow(color: .red)
-        shadowOffsetHeight = self.layer.shadowOffset.height
+        addShadow(color: .red, offsetHeight: 20)
     }
     
-    private func addShadow(color: UIColor) {
-        self.layer.shadowOffset = CGSize(width: 0, height: 20)
+    private func addShadow(color: UIColor, offsetHeight: CGFloat) {
+        shadowOffsetHeight = offsetHeight
+        self.layer.shadowOffset = CGSize(width: 0, height: shadowOffsetHeight)
         self.layer.shadowColor = color.cgColor
         self.layer.shadowRadius = 1
         self.layer.shadowOpacity = 1.0
@@ -43,27 +43,27 @@ extension PressableMaterialButton {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        pressButtonAnimation()
+        pressedButtonAnimation()
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        releaseButtonAnimation()
+        releasedButtonAnimation()
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
-        releaseButtonAnimation()
+        releasedButtonAnimation()
     }
     
-    private func pressButtonAnimation() {
+    private func pressedButtonAnimation() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseIn) {
             self.transform = CGAffineTransform(translationX: 0, y: self.shadowOffsetHeight)
             self.layer.shadowOffset.height = 0
         }
     }
     
-    private func releaseButtonAnimation() {
+    private func releasedButtonAnimation() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseIn) {
             self.transform = CGAffineTransform.identity
             self.layer.shadowOffset.height = self.shadowOffsetHeight
