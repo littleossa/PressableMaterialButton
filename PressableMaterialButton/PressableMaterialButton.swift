@@ -33,7 +33,7 @@ class PressableMaterialButton: UIButton {
         shadowOffsetHeight = offsetHeight
         self.layer.shadowOffset = CGSize(width: 0, height: shadowOffsetHeight)
         self.layer.shadowColor = color.cgColor
-        self.layer.shadowRadius = 1
+        self.layer.shadowRadius = 1.0
         self.layer.shadowOpacity = 1.0
     }
 }
