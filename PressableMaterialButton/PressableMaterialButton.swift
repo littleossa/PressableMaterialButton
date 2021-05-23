@@ -25,7 +25,6 @@ class PressableMaterialButton: UIButton {
     
     private func configureUI() {
         self.layer.cornerRadius = self.frame.height / 2
-        self.layer.masksToBounds = false
         addShadow(color: .red, offsetHeight: 20)
     }
     
