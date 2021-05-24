@@ -25,13 +25,13 @@ class PressableMaterialButton: UIButton {
     
     private func configureUI() {
         self.layer.cornerRadius = self.frame.height / 2
-        addShadow(color: .redShadowColor, offsetHeight: 20)
+        addShadow(offsetHeight: 20)
     }
     
-    private func addShadow(color: UIColor, offsetHeight: CGFloat) {
+    private func addShadow(offsetHeight: CGFloat) {
         shadowOffsetHeight = offsetHeight
         self.layer.shadowOffset = CGSize(width: 0, height: shadowOffsetHeight)
-        self.layer.shadowColor = color.cgColor
+        self.layer.shadowColor = UIColor.shadowColorRed.cgColor
         self.layer.shadowRadius = 1.0
         self.layer.shadowOpacity = 1.0
     }
