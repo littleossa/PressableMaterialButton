@@ -19,4 +19,3 @@ class ViewController: UIViewController {
         neverPressLabel.text = "絶対に押すな！！"
     }
 }
-
