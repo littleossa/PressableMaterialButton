@@ -58,14 +58,14 @@ extension PressableMaterialButton {
     private func pressedButtonAnimation() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseIn) {
             self.transform = CGAffineTransform(translationX: 0, y: self.shadowOffsetHeight)
-            self.layer.shadowOffset.height = 0
+            self.layer.shadowOffset.height -= self.shadowOffsetHeight
         }
     }
     
     private func releasedButtonAnimation() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseOut) {
             self.transform = CGAffineTransform.identity
-            self.layer.shadowOffset.height = self.shadowOffsetHeight
+            self.layer.shadowOffset.height += self.shadowOffsetHeight
         }
     }
 }
