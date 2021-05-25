@@ -56,16 +56,28 @@ extension PressableMaterialButton {
     }
     
     private func pressedButtonAnimation() {
+        addShadowHeightAnimation(from: self.shadowOffsetHeight, to: 0, option: .easeIn)
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseIn) {
             self.transform = CGAffineTransform(translationX: 0, y: self.shadowOffsetHeight)
-            self.layer.shadowOffset.height -= self.shadowOffsetHeight
         }
     }
     
     private func releasedButtonAnimation() {
+        addShadowHeightAnimation(from: 0, to: self.shadowOffsetHeight, option: .easeOut)
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseOut) {
             self.transform = CGAffineTransform.identity
-            self.layer.shadowOffset.height += self.shadowOffsetHeight
         }
+    }
+    
+    private func addShadowHeightAnimation(from fromValue: CGFloat, to toValue: CGFloat, option: CAMediaTimingFunctionName) {
+        let animation = CABasicAnimation(keyPath: "shadowOffset")
+        animation.duration = 0.1
+        animation.fromValue = CGSize(width: 0, height: fromValue)
+        animation.toValue = CGSize(width: 0, height: toValue)
+        animation.timingFunction = CAMediaTimingFunction(name: option)
+        animation.autoreverses = false
+        animation.isRemovedOnCompletion = false
+        animation.fillMode = CAMediaTimingFillMode.forwards
+        self.layer.add(animation, forKey: nil)
     }
 }
