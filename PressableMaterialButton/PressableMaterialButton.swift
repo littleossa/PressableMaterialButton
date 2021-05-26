@@ -9,7 +9,7 @@ import UIKit
 
 class PressableMaterialButton: UIButton {
     
-    private var shadowOffsetHeight: CGFloat = 0
+    private var shadowOffsetHeight: CGFloat = 20
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,13 +25,12 @@ class PressableMaterialButton: UIButton {
     
     private func configureUI() {
         self.layer.cornerRadius = self.frame.height / 2
-        addShadow(offsetHeight: 20)
+        addShadow(with: .shadowColorRed)
     }
     
-    private func addShadow(offsetHeight: CGFloat) {
-        shadowOffsetHeight = offsetHeight
+    private func addShadow(with color: UIColor) {
         self.layer.shadowOffset = CGSize(width: 0, height: shadowOffsetHeight)
-        self.layer.shadowColor = UIColor.shadowColorRed.cgColor
+        self.layer.shadowColor = color.cgColor
         self.layer.shadowRadius = 1.0
         self.layer.shadowOpacity = 1.0
     }
@@ -56,17 +55,17 @@ extension PressableMaterialButton {
     }
     
     private func pressedButtonAnimation() {
-        addShadowHeightAnimation(from: self.shadowOffsetHeight, to: 0, option: .easeIn)
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseIn) {
             self.transform = CGAffineTransform(translationX: 0, y: self.shadowOffsetHeight)
         }
+        addShadowHeightAnimation(from: self.shadowOffsetHeight, to: 0, option: .easeIn)
     }
     
     private func releasedButtonAnimation() {
-        addShadowHeightAnimation(from: 0, to: self.shadowOffsetHeight, option: .easeOut)
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseOut) {
             self.transform = CGAffineTransform.identity
         }
+        addShadowHeightAnimation(from: 0, to: self.shadowOffsetHeight, option: .easeOut)
     }
     
     private func addShadowHeightAnimation(from fromValue: CGFloat, to toValue: CGFloat, option: CAMediaTimingFunctionName) {
