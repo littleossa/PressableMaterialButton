@@ -1,4 +1,4 @@
-# PushableMaterialButton
+# PressableMaterialButton
 「絶対に押すなよ！！」と言われるとついつい押したくなる直感的に押せそうなデザインのボタン
 
 # Demo
